@@ -65,14 +65,15 @@
     /* ─── Navigation ─── */
     .nav {
       position: fixed;
-      top: 0;
-      right: 0;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
       z-index: 100;
-      padding: 32px 40px;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 12px;
+      gap: 32px;
     }
     .nav a {
       font-family: var(--font-heading);
@@ -82,10 +83,12 @@
       text-transform: uppercase;
       text-decoration: none;
       color: var(--muted);
-      transition: color 0.2s ease;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid rgba(58, 123, 170, 0.4);
+      transition: color 0.2s ease, border-color 0.2s ease;
     }
-    .nav a.active { color: var(--ink); }
-    .nav a:hover  { color: var(--ink); }
+    .nav a.active { color: var(--ink); border-color: var(--ink); }
+    .nav a:hover  { color: var(--ink); border-color: var(--ink); }
 
     /* ─── Page Content ─── */
     .page {
@@ -243,7 +246,7 @@
       .page { padding: 100px 24px 60px; }
     }
     @media (max-width: 768px) {
-      .nav { padding: 20px 24px; gap: 20px; }
+      .nav { top: 0; right: 0; transform: none; padding: 20px 24px; gap: 14px; }
       .cursor { display: none; }
       body, a, button { cursor: auto !important; }
     }
