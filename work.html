@@ -48,7 +48,7 @@
       height: 200%;
       z-index: 1;
       pointer-events: none;
-      opacity: 0.05;
+      opacity: 0.035;
     }
 
     /* ─── Topographic Background ─── */
@@ -93,9 +93,9 @@
     }
     .nav a {
       font-family: var(--font-heading);
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       font-weight: 500;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       text-decoration: none;
       color: var(--muted);
@@ -284,7 +284,7 @@
     function drawTopo() {
       var W = window.innerWidth, H = window.innerHeight;
       ctx.clearRect(0, 0, W, H);
-      ctx.strokeStyle = 'rgba(107, 93, 79, 0.35)';
+      ctx.strokeStyle = '#BEBEBE';
       ctx.lineWidth = 0.8;
       ctx.lineCap = 'round';
 
